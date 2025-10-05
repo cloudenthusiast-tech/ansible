@@ -1,0 +1,8 @@
+- name: task level vars
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: print the course info
+    ansible.builtin.debug:
+      msg: "course name: {{ COURSE }}, duration: {{ DURATION }}, trainer: {{ TRAINER }}"
