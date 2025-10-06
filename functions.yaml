@@ -3,6 +3,11 @@
   connection: local
   vars:
     technologies: devops, linux, ansible, shell
+
+  # dictionaries to list
+    dict:
+      technology: DEVSECOPS
+      scope: finding it's way
   
   tasks:
   - name: print hello with undefined variable
@@ -13,4 +18,9 @@
   - name: string to list
     ansible.builtin.debug:
       msg: "technologies are: {{ technologies | split(',') }}"
+
+  - name: dictionaries to list
+    ansible.builtin.debug:
+       msg: "dict are: {{ dict | dict2items }}" 
+
 
