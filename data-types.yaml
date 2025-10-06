@@ -20,3 +20,6 @@
     ansible.builtin.debug:
        msg: "Course name is {{ COURSE }}, duration {{ DURATION }}, is_live {{ is_live }}, tools teached {{ tools }}, concepts learned {{ concepts }}"
       
+
+# []  -> represents list
+# {}  -> represents map or dictionary
