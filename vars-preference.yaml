@@ -5,8 +5,8 @@
   vars:
     NAME: this is from play level
   vars_prompt:
-  - name: from prompt
-    prompt: what is u r username?
+  - name: NAME
+    prompt: what is u r NAME?
     private: false
   vars_files:
   - course.yaml
@@ -15,4 +15,4 @@
     vars:
       NAME: this is from task level   
     ansible.builtin.debug:
-       msg: "name: {{ NAME }}"
+       msg: "Name: {{ NAME }}"
