@@ -11,9 +11,9 @@
   # list to dictionary
     list:
       - nanonacho
-        hakunamatata
-        ironman
-        wanda maxmioff
+      - hakunamatata
+      - ironman
+      - wanda maxmioff
   
   tasks:
   - name: print hello with undefined variable
