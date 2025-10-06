@@ -5,11 +5,11 @@
   vars:
     NAME: this is from play level
   vars_prompt:
-   - name: from prompt
-     prompt: what is u r username?
-     private: false
+  - name: from prompt
+    prompt: what is u r username?
+    private: false
   vars_files:
-    - course.yaml
+  - course.yaml
   tasks:
   - name: testing variable preference
     vars:
