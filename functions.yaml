@@ -3,6 +3,7 @@
   connection: local
   vars:
     technologies: devops, linux, ansible, shell
+    name: "blackpanther"
 
   # dictionaries to list
     dict:
@@ -47,6 +48,9 @@
       dest: ./student-data.json
       content: "{{ student_yaml | to_nice_json }}"
        
+  - name: lower to upper
+    ansible.builtin.debug:
+      msg: "{{ name | upper }}"
 
 
 
