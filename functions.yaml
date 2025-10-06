@@ -27,10 +27,10 @@
 
   - name: dictionaries to list
     ansible.builtin.debug:
-       msg: "dict are: {{ dict | dict2items }}" 
+       msg: "list are: {{ dict | dict2items }}" 
 
   - name: list to dictionary
     ansible.builtin.debug:
-      msg: "list are {{ list | items2dict }}"
+      msg: "dict are {{ list | items2dict }}"
 
 
