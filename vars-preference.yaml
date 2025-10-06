@@ -12,7 +12,11 @@
   - course.yaml
   tasks:
   - name: testing variable preference
-    vars:
-      NAME: this is from task level   
+    # vars:
+    #   NAME: this is from task level   
     ansible.builtin.debug:
        msg: "Name: {{ NAME }}"
+
+#preference order
+#  from ->arguments or cli
+# from task level
