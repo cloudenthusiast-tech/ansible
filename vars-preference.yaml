@@ -8,8 +8,8 @@
   - name: NAME
     prompt: what is u r NAME?
     private: false
-  vars_files:
-  - course.yaml
+  # vars_files:
+  # - course.yaml
   tasks:
   - name: testing variable preference
     # vars:
@@ -20,3 +20,4 @@
 #preference order
 #  from ->arguments or cli
 # from task level
+# from vars-file(course.yaml)
