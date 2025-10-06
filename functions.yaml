@@ -1,7 +1,9 @@
 - name: play with functions
   hosts: local
   connection: local
+  # vars:
+  #  name
   tasks:
   - name: print hello with undefined variable
     ansible.builtin.debug:
-       msg: "Hello {{ name }}"
+       msg: "Hello {{ name | ('allanki' ) }}"
