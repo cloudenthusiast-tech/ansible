@@ -6,9 +6,7 @@
   - name: loop through packages
     ansible.builtin.package:
       name: "{{ item }}"
-      state: latest
-      enabled: yes
-      
+      state: latest 
     loop:
      - nginx
      - mysql
