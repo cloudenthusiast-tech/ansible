@@ -7,7 +7,7 @@
   # dictionaries to list
     dict:
       technology: DEVSECOPS
-      scope: finding it's way
+      scope: finding-it's-way
   
   tasks:
   - name: print hello with undefined variable
