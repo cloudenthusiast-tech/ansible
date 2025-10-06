@@ -1,0 +1,22 @@
+- name: data types
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    COURSE: "devsecops"  # string
+    DURATION: 140 #number
+    is_live: true #boolean
+    #list
+    tools:   #these are list
+      - DevSecOps
+      - linux
+      - Ansible
+      # maps or dictionary
+    concepts:   
+      clould: AWS
+      cm: Ansible
+  tasks:
+  - name: print course info
+    ansible.builtin.debug:
+       msg: "Course name is {{ COURSE }}, duration {{ DURATION }}, is_live {{ is_live }}, tools teached {{ tools }}, concepts learned {{ concepts }}"
+      
