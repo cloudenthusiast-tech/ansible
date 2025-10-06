@@ -4,6 +4,7 @@
   vars:
     technologies: devops, linux, ansible, shell
     name: "blackpanther"
+    gmail: nanonacho@GMAil.com
 
   # dictionaries to list
     dict:
@@ -51,6 +52,11 @@
   - name: lower to upper
     ansible.builtin.debug:
       msg: "{{ name | upper }}"
+
+  - name: upper to lower
+    ansible.builtin.debug:
+      msg: "{{ name | lower }}"
+
 
 
 
