@@ -2,8 +2,8 @@
   hosts: local
   connection: local
   become: yes
-  vars:
-    NAME: this is from play level
+  # vars:
+  #   NAME: this is from play level
   # vars_prompt:
   # - name: NAME
   #   prompt: what is u r NAME?
@@ -22,3 +22,4 @@
 # 2)from task level
 # 3)from vars-file(course.yaml)
 # 4)from -> vars_prompt
+# 5)from -> from play level
