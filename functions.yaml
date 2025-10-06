@@ -12,7 +12,7 @@
     list:
       - key: name
         value: nanonacho
-      - key: technology
+      - key: field
         value: devops 
   
   tasks:
@@ -32,5 +32,21 @@
   - name: list to dictionary
     ansible.builtin.debug:
       msg: "dict are {{ list | items2dict }}"
+
+  # pass result to a variable on spot 
+  - name: read the yaml file and take it into variable
+    ansible.builtin.set_fact:
+       student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml}}"   # "{{ lookup('file', 'student.yaml') | from_yaml}}"   is a standard line  passing reults into student_yaml variable
+
+  - name: convert yaml into json
+    ansible.builtin.debug:
+       msg: "json: {{ student_yaml | to_json }}"
+    
+  - name: save json to file
+    ansible.builtin.debug:
+      dest: ./student-data.json
+      content: "{{ student_yaml | to_nice_json }}"
+       
+
 
 
