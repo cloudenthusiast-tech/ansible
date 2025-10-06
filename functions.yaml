@@ -10,10 +10,10 @@
       scope: finding-it's-way
   # list to dictionary
     list:
-      - nanonacho
-      - hakunamatata
-      - ironman
-      - wanda maxmioff
+      - key: name
+        value: nanonacho
+      - key: technology
+        value: devops 
   
   tasks:
   - name: print hello with undefined variable
