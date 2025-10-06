@@ -1,9 +1,16 @@
 - name: play with functions
   hosts: local
   connection: local
-  # vars:
-  #  name
+  vars:
+    technologies: devops, linux, ansible, shell
+  
   tasks:
   - name: print hello with undefined variable
     ansible.builtin.debug:
-      msg: "Hello {{ name | default('allanki') }}"
+      msg: "Hello {{ name | default('allanki') }}"  #take default name if non specified
+
+
+  - name: string to list
+    ansible.builtin.debug:
+      msg: "technologies are: {{ technologies | split(',') }}"
+
