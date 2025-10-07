@@ -6,9 +6,8 @@
     sg_id: sg-04bb003e653859fa2
     zone_id: Z10446792H6QP6XMMVXFH
     domain_name: "kolanu.space"
-    instance:
+    instances:
     - mongodb
-
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -18,7 +17,7 @@
       image_id: "{{ ami_id }}"
       tags:
         Name: "{{ item }}"
-    loop: "{{ instance }}"
+    loop: "{{ instances }}"
     register: ec2_output
 
   - name: print the ec2_output   #
