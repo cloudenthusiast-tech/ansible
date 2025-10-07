@@ -35,14 +35,13 @@
   #   loop: "{{ ec2_output.results }}"
     
 
-- name: create route53
-  amazon.aws.route53:
-    state: present
-    zone: "{{ domain_name }}"
-    record: "{{ item.item }}.{{ domain_name }}" #-> #mongodb.kolanu.space# item=instances  item=mongodb in ec2_output   #mongodb.kolanu.space
-    
-    type: A
-    ttl: 1
-    value: "{{ item.instances[0].public_ip_address }}"
-    overwrite: true
+  - name: create route53
+    amazon.aws.route53:
+      state: present
+      zone: "{{ domain_name }}"
+      record: "{{ item.item }}.{{ domain_name }}" #-> #mongodb.kolanu.space# item=instances  item=mongodb in ec2_output   #mongodb.kolanu.space
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].public_ip_address }}"
+      overwrite: true
     loop: "{{ ec2_output.results }}"
