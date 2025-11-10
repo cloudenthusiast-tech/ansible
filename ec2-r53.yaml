@@ -39,7 +39,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ domain_name }}"
-      record: "{{ item.item }}.{{ domain_name }}" #-> #mongodb.kolanu.space# item=instances  item=mongodb in ec2_output   #mongodb.kolanu.space
+      record: "{{ item.item }}.{{ domain_name }}" #-> #mongodb.kolanu.space# here 1st)item=instances  within the instances block-> 2nd item=mongodb in ec2_output  querying the ec2_output 
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
